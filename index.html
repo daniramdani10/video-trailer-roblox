@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #trailer {
+            position: fixed;
+            min-height: 100%;
+            min-width: 100%;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .intro {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.223);
+            color: white;
+            padding: 16px;
+            font-size: 20px;
+            /* border: 1px black solid; */
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+        }
+
+        #btn {
+            border: none;
+            padding: 12px;
+            color: white;
+            background-color: black;
+            font-weight: 800;
+            width: 200px;
+            cursor: pointer;
+
+        }
+    </style>
+    <title>Game trailer roblox</title>
+</head>
+
+<body>
+    <video src="assets/game_trailer.mp4" autoplay muted type="video/mp4" id="trailer"></video>
+    <div class="intro">
+        <center>
+            <img src="assets/roblox-logo.png" alt="logo roblox" class="logo">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus optio magnam pariatur dignissimos,
+                error
+                tempore labore eligendi praesentium. Commodi a nisi ex quam iste atque neque quas doloribus deleniti
+                illum?
+            </P>
+            <button id="btn" onclick="tg()">PAUSE</button>
+        </center>
+    </div>
+
+
+    <script>
+        const btn = document.getElementById('btn')
+        const trailer = document.getElementById('trailer')
+
+        function tg() {
+            if (trailer.paused) {
+                trailer.play()
+                btn.innerHTML = "PAUSE"
+            } else {
+                trailer.pause()
+                btn.innerHTML = "PLAY"
+            }
+        }
+    </script>
+</body>
+
+</html>
